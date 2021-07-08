@@ -1,0 +1,56 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "start": "ts-node dist/index.js",
+    "build": "tsc -p .",
+    "lint": "eslint . --ext .js,.tsx,.ts",
+    "lint:fix": "eslint . --fix --ext .js,.tsx,.ts",
+    "test": "jest src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@contentpi/lib": "^1.0.6",
+    "@graphql-tools/load-files": "^6.3.2",
+    "@graphql-tools/merge": "^6.2.14",
+    "apollo-server": "^2.25.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "ts-node": "^10.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.1",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^26.0.24",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/node": "^16.0.1",
+    "@types/sequelize": "^4.28.10",
+    "eslint": "^7.30.0",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "sequelize-mock": "^0.10.2",
+    "ts-jest": "^27.0.3",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}
