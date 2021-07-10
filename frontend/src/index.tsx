@@ -2,7 +2,7 @@
 import ReactDOM from 'react-dom'
 
 // Apollo
-import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client'
 
 // Components
 import AppRoutes from './AppRoutes'
@@ -14,10 +14,11 @@ import config from './config'
 const client = new ApolloClient({
   uri: config.apiUrl,
   cache: new InMemoryCache()
-});
+})
 
 ReactDOM.render(
   <ApolloProvider client={client}>
     <AppRoutes />
-  </ApolloProvider>
-, document.querySelector('#root'))
+  </ApolloProvider>,
+  document.querySelector('#root')
+)
